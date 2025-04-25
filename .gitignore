@@ -47,3 +47,7 @@ out
 
 test-output
 .aider*
+
+# Cloned repositories that should not be pushed
+/apps/data-table-filters
+/apps/shadcn-table
