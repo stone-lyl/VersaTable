@@ -1,14 +1,23 @@
 # VersaTable
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+A Next.js friendly project built with React, TypeScript, and data-table-filters for creating versatile data tables.
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is almost ready ✨.
+## Project Overview
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/nx-api/next?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
+VersaTable is a comprehensive data management system that provides powerful data visualization and analysis capabilities. The project is built using Next.js, React, TypeScript, and leverages [data-table-filters](https://github.com/openstatusHQ/data-table-filters) for advanced table functionality.
 
-## Finish your CI setup
+## Features
 
-[Click here to finish setting up your workspace!](https://cloud.nx.app/connect/Gw6W12HdDM)
+- **Data Analysis System**: A dedicated page for analyzing and visualizing data with interactive charts and tables
+- **Logging System**: A comprehensive logging interface for monitoring system activities
+- **Reusable Table Component**: A shared table component that can be customized for different use cases
+
+## Tech Stack
+
+- Next.js for server-side rendering and routing
+- React for building user interfaces
+- TypeScript for type safety
+- data-table-filters for advanced table filtering capabilities
 
 
 ## Run tasks
@@ -35,48 +44,52 @@ These targets are either [inferred automatically](https://nx.dev/concepts/inferr
 
 [More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 
-## Add new projects
+## Project Structure
 
-While you could add new projects to your workspace manually, you might want to leverage [Nx plugins](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) and their [code generation](https://nx.dev/features/generate-code?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) feature.
-
-Use the plugin's generator to create new projects.
-
-To generate a new application, use:
-
-```sh
-npx nx g @nx/next:app demo
+```
+├── apps/
+│   └── VersaTable/        # Main Next.js application
+│       ├── app/
+│       │   ├── analysis/   # Data Analysis System page
+│       │   └── logs/       # Logging System page
+│       └── components/
+│           └── ui/
+│               └── Table/  # Shared Table component
+└── packages/              # Shared libraries
 ```
 
-To generate a new library, use:
+## Getting Started
 
-```sh
-npx nx g @nx/react:lib mylib
-```
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Start the development server: `npx nx dev VersaTable`
+4. Open your browser and navigate to `http://localhost:3000`
 
-You can use `npx nx list` to get a list of installed plugins. Then, run `npx nx list <plugin-name>` to learn about more specific capabilities of a particular plugin. Alternatively, [install Nx Console](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) to browse plugins and generators in your IDE.
+## Pages
 
-[Learn more about Nx plugins &raquo;](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) | [Browse the plugin registry &raquo;](https://nx.dev/plugin-registry?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+### Data Analysis System
 
+The Data Analysis System page provides a comprehensive interface for analyzing and visualizing data. It includes:
 
-[Learn more about Nx on CI](https://nx.dev/ci/intro/ci-with-nx#ready-get-started-with-your-provider?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+- Interactive data tables with advanced filtering
+- Data visualization components
+- Export functionality
 
-## Install Nx Console
+### Logging System
 
-Nx Console is an editor extension that enriches your developer experience. It lets you run tasks, generate code, and improves code autocompletion in your IDE. It is available for VSCode and IntelliJ.
+The Logging System page offers a detailed view of system logs with features such as:
 
-[Install Nx Console &raquo;](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+- Real-time log monitoring
+- Log filtering and search
+- Log level management
 
-## Useful links
+## Components
 
-Learn more:
+### Shared Table Component
 
-- [Learn more about this workspace setup](https://nx.dev/nx-api/next?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects)
-- [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+The shared Table component is a versatile and reusable component that provides:
 
-And join the Nx community:
-- [Discord](https://go.nx.dev/community)
-- [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
-- [Our Youtube channel](https://www.youtube.com/@nxdevtools)
-- [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+- Advanced filtering using data-table-filters
+- Sorting and pagination
+- Customizable columns and cell renderers
+- Responsive design
